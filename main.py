@@ -18,7 +18,6 @@ class myWindow(QWidget, Ui_Form):
     def format_pdf_text(self):
 
         temp_text = pyperclip.waitForPaste()
-        #print(temp_text)
         #temp_text.replace("\r\n", " ")
         clean_text = temp_text.replace('\n', '').replace('\r', '')
         clean_text.strip()
