@@ -14,10 +14,20 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(400, 300)
-        self.pushButton = QtWidgets.QPushButton(Form)
-        self.pushButton.setGeometry(QtCore.QRect(160, 60, 75, 23))
-        self.pushButton.setObjectName("pushButton")
+        Form.resize(686, 527)
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(Form)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.verticalLayout = QtWidgets.QVBoxLayout()
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.pushButton_translate = QtWidgets.QPushButton(Form)
+        self.pushButton_translate.setObjectName("pushButton_translate")
+        self.verticalLayout.addWidget(self.pushButton_translate)
+        self.plainTextEdit_pdf_text = QtWidgets.QPlainTextEdit(Form)
+        self.plainTextEdit_pdf_text.setLineWrapMode(QtWidgets.QPlainTextEdit.NoWrap)
+        self.plainTextEdit_pdf_text.setOverwriteMode(True)
+        self.plainTextEdit_pdf_text.setObjectName("plainTextEdit_pdf_text")
+        self.verticalLayout.addWidget(self.plainTextEdit_pdf_text)
+        self.verticalLayout_2.addLayout(self.verticalLayout)
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -25,4 +35,4 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.pushButton.setText(_translate("Form", "PushButton"))
+        self.pushButton_translate.setText(_translate("Form", "翻译"))
