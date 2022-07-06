@@ -11,28 +11,28 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(686, 527)
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(Form)
+class Ui_pdf_translate(object):
+    def setupUi(self, pdf_translate):
+        pdf_translate.setObjectName("pdf_translate")
+        pdf_translate.resize(686, 527)
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(pdf_translate)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")
-        self.pushButton_translate = QtWidgets.QPushButton(Form)
+        self.pushButton_translate = QtWidgets.QPushButton(pdf_translate)
         self.pushButton_translate.setObjectName("pushButton_translate")
         self.verticalLayout.addWidget(self.pushButton_translate)
-        self.plainTextEdit_pdf_text = QtWidgets.QPlainTextEdit(Form)
+        self.plainTextEdit_pdf_text = QtWidgets.QPlainTextEdit(pdf_translate)
         self.plainTextEdit_pdf_text.setLineWrapMode(QtWidgets.QPlainTextEdit.WidgetWidth)
         self.plainTextEdit_pdf_text.setOverwriteMode(True)
         self.plainTextEdit_pdf_text.setObjectName("plainTextEdit_pdf_text")
         self.verticalLayout.addWidget(self.plainTextEdit_pdf_text)
         self.verticalLayout_2.addLayout(self.verticalLayout)
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        self.retranslateUi(pdf_translate)
+        QtCore.QMetaObject.connectSlotsByName(pdf_translate)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self, pdf_translate):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.pushButton_translate.setText(_translate("Form", "翻译"))
+        pdf_translate.setWindowTitle(_translate("pdf_translate", "PDF translator"))
+        self.pushButton_translate.setText(_translate("pdf_translate", "翻译"))

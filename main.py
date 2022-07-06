@@ -3,12 +3,13 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 import pyperclip
-
+import pyautogui
 import sys
-from UI_pdf_translate_designed import Ui_Form
+import time
+from UI_pdf_translate_designed import Ui_pdf_translate
 
 
-class myWindow(QWidget, Ui_Form):
+class myWindow(QWidget, Ui_pdf_translate):
     def __init__(self):
         super().__init__()
         self.setupUi(self)  # 调用父类的setupUI函数
@@ -22,6 +23,11 @@ class myWindow(QWidget, Ui_Form):
         clean_text = temp_text.replace('\n', '').replace('\r', '')
         clean_text.strip()
         self.plainTextEdit_pdf_text.setPlainText(clean_text)
+        self.plainTextEdit_pdf_text.setFocus()
+        time.sleep(0.2)
+        pyautogui.hotkey('ctrl', 'a')  # 按键ctrl+c
+        time.sleep(0.2)
+        pyautogui.hotkey('ctrl', 'f9')  # 按键ctrl+c
 
 
 
