@@ -26,7 +26,7 @@
      <item>
       <widget class="QPlainTextEdit" name="plainTextEdit_pdf_text">
        <property name="lineWrapMode">
-        <enum>QPlainTextEdit::NoWrap</enum>
+        <enum>QPlainTextEdit::WidgetWidth</enum>
        </property>
        <property name="overwriteMode">
         <bool>true</bool>

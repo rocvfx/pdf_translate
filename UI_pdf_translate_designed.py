@@ -23,7 +23,7 @@ class Ui_Form(object):
         self.pushButton_translate.setObjectName("pushButton_translate")
         self.verticalLayout.addWidget(self.pushButton_translate)
         self.plainTextEdit_pdf_text = QtWidgets.QPlainTextEdit(Form)
-        self.plainTextEdit_pdf_text.setLineWrapMode(QtWidgets.QPlainTextEdit.NoWrap)
+        self.plainTextEdit_pdf_text.setLineWrapMode(QtWidgets.QPlainTextEdit.WidgetWidth)
         self.plainTextEdit_pdf_text.setOverwriteMode(True)
         self.plainTextEdit_pdf_text.setObjectName("plainTextEdit_pdf_text")
         self.verticalLayout.addWidget(self.plainTextEdit_pdf_text)
