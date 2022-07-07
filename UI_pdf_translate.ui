@@ -18,6 +18,12 @@
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
       <widget class="QPushButton" name="pushButton_translate">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>50</height>
+        </size>
+       </property>
        <property name="text">
         <string>翻译</string>
        </property>
@@ -29,7 +35,7 @@
         <enum>QPlainTextEdit::WidgetWidth</enum>
        </property>
        <property name="overwriteMode">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
       </widget>
      </item>
