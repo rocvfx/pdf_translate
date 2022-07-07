@@ -27,9 +27,9 @@ class myWindow(QWidget, Ui_pdf_translate):
         #clean_text.strip()
         self.plainTextEdit_pdf_text.setPlainText(clean_text)
         self.plainTextEdit_pdf_text.setFocus()
-        time.sleep(0.2)
+        time.sleep(0.1)
         pyautogui.hotkey('ctrl', 'a')  # 按键ctrl+a 全选文本
-        time.sleep(0.5)
+        time.sleep(0.1)
         #pyautogui.hotkey('ctrl', 'c', 'c')  # 召唤deepl
         pyautogui.keyDown('ctrl')
         pyautogui.press(['c', 'c'])
