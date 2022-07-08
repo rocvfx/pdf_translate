@@ -19,6 +19,11 @@ class myWindow(QWidget, Ui_pdf_translate):
         self.setupUi(self)
 
         self.pushButton_translate.clicked.connect(self.format_pdf_text)
+        self.pushButton_clear.clicked.connect(self.clear)
+        self.pushButton_paste_translate.clicked.connect(self.paste_translate)
+
+    def clear(self):
+        self.plainTextEdit_pdf_text.setPlainText('')
 
     def format_pdf_text(self):
         temp_text = pyperclip.paste()
@@ -34,6 +39,20 @@ class myWindow(QWidget, Ui_pdf_translate):
         pyautogui.keyDown('ctrl')
         pyautogui.press(['c', 'c'])
         pyautogui.keyUp('ctrl')
+
+    def paste_translate(self):
+        temp_text = self.plainTextEdit_pdf_text.toPlainText()
+        clean_text = temp_text.replace('\n', ' ').replace('\r', ' ')
+        self.plainTextEdit_pdf_text.setPlainText(clean_text)
+        self.plainTextEdit_pdf_text.setFocus()
+        time.sleep(0.1)
+        pyautogui.hotkey('ctrl', 'a')  # 按键ctrl+a 全选文本
+        time.sleep(0.1)
+        # pyautogui.hotkey('ctrl', 'c', 'c')  # 召唤deepl
+        pyautogui.keyDown('ctrl')
+        pyautogui.press(['c', 'c'])
+        pyautogui.keyUp('ctrl')
+
 
 def main():
     app = QApplication(sys.argv)
