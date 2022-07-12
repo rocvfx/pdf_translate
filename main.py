@@ -21,6 +21,7 @@ class myWindow(QWidget, Ui_pdf_translate):
         self.pushButton_translate.clicked.connect(self.format_pdf_text)
         self.pushButton_clear.clicked.connect(self.clear)
         self.pushButton_paste_translate.clicked.connect(self.paste_translate)
+        self.pushButton_screenshot.clicked.connect(self.screenshot)
 
     def clear(self):
         self.plainTextEdit_pdf_text.setPlainText('')
@@ -52,7 +53,8 @@ class myWindow(QWidget, Ui_pdf_translate):
         pyautogui.keyDown('ctrl')
         pyautogui.press(['c', 'c'])
         pyautogui.keyUp('ctrl')
-
+    def screenshot(self):
+        pyautogui.hotkey('shift', 'win', 's')  # 系统截图
 
 def main():
     app = QApplication(sys.argv)
